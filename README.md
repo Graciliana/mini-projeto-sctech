@@ -1,0 +1,1 @@
+    O projeto foi estruturado seguindo boas práticas de engenharia de dados, separando os datasets brutos (raw) dos datasets tratados (processed), garantindo rastreabilidade e preservação dos dados originais.
