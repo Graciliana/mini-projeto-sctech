@@ -148,3 +148,4 @@ def processar_produtos(caminho_entrada):
     }
     
     return produtos, relatorio
+
