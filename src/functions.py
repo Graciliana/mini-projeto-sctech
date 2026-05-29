@@ -8,18 +8,24 @@ from datetime import datetime
 
 # remover espaço colocar tudo com letras minusculas e remover caraters
 def limpar_categoria(categoria):
-
+    #transformar em minúsculo
     categoria = categoria.lower()
-
+    # remover espaço extra
     categoria = categoria.strip()
-
+    # substituir underline por espaço
+    categoria =  categoria.replace("_", " ")
+    
+    # remover caracteres espaciais
     categoria = re.sub(
         r"[^a-zA-Zà-ÿ0-9\s]",
         "",
         categoria
     )
-
+    # remover espaços duplicados
     categoria = re.sub(r"\s+", " ", categoria)
+    
+    # primeira letra maiúscula em cada palavra
+    categoria = categoria.title()
 
     return categoria
 # tratar as categoria vazias substituindo  por sem categoria
@@ -27,7 +33,7 @@ def tratar_categoria_vazia(categoria):
     
     if categoria.strip() == "":
         
-        return "sem categoria"
+        return "Sem Categoria"
     
     return categoria
 
@@ -85,8 +91,8 @@ def calcular_volume(
 if __name__ == "__main__":
 
     print(limpar_categoria(" Informática### "))
-    print(limpar_categoria("Cama, Mesa e Banho!!!"))
-    print(limpar_categoria("Telefonia@#$"))
+    print(limpar_categoria("cama_Mesa_Banho!!!"))
+    print(limpar_categoria("telefonia   "))
     
     print(tratar_categoria_vazia(""))
     
