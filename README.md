@@ -157,6 +157,6 @@ Além disso, técnicas de Feature Engineering, como a criação de novas variáv
 
 ## Autora
 
-Graciliana Kascher - 
+Graciliana Kascher - <https://www.linkedin.com/in/gracilianakascher/>
 
 Projeto desenvolvido para o Bootcamp de Machine Learning e Visão Computacional.
